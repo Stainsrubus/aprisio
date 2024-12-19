@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import yoga from "../../public/images/yoga.png";
 import arrow2 from "../../public/images/arrow-2.png";
@@ -68,9 +68,6 @@ export default function Events() {
           loopAdditionalSlides={2} // Ensures the first two slides are appended for smooth scrolling
           autoplay={{ delay: 3000 }}
           className="mySwiper"
-          onInit={(swiper:any) => {
-            swiperRef.current = swiper;
-          }}
         >
           {data.map((item, index) => (
             <SwiperSlide key={index}>

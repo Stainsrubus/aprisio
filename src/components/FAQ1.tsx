@@ -37,9 +37,10 @@ export default function FAQ1(){
 <div className="pl-4 pb-4 lg:hidden block">
     <Image className="h-6 w-6"  src={arrowDown} alt=""/>
 </div>
+
 <div className="flex lg:flex-col items-start gap-5">
-<div >
-<Image className="lg:w-24 lg:h-24 w-14 h-14"  src={step2} alt="step2"/>
+<div className="">
+<Image className="lg:max-w-24 lg:max-h-24 max-w-14 max-h-14"  src={step2} alt="step1"/>
 </div>
 <div className="-mt-6 lg:mt-0">
     <h1 className="text-[#353535] pt-10 lg:text-4xl text-xl font-bold font-mulish">
@@ -62,7 +63,7 @@ export default function FAQ1(){
 </div>
 <div className="flex lg:flex-col items-start gap-5">
 <div className="">
-<Image className="lg:w-24 lg:h-24 w-14 h-14"  src={step3} alt="step3"/>
+<Image className="lg:max-w-24 lg:max-h-24 max-w-14 max-h-14"  src={step3} alt="step3"/>
 </div>
 <div className="-mt-6 lg:mt-0">
     <h1 className="text-[#353535] pt-10 lg:text-4xl text-xl font-bold font-mulish">

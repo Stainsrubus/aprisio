@@ -21,7 +21,7 @@ export default function FAQ2() {
             <div className="grid lg:grid-cols-3  lg:gap-20 gap-10 relative">
                 <div className="flex lg:flex-col lg:gap-10 gap-5 items-start">
                     <div className="lg:h-28 rounded-full lg:w-28 bg-[#FFE4E0] h-14 w-14 flex items-center justify-center">
-                        <Image src={share} className="lg:p-10 p-4" alt="sharing" />
+                    <Image src={share} className="lg:p-10 p-4" alt="sharing" />
                     </div>
                     <div className="flex flex-col gap-4 lg:pt-0 pt-3">
                         <h1 className="font-roboto font-semibold lg:text-4xl text-2xl text-[#353535]">
@@ -32,30 +32,30 @@ export default function FAQ2() {
                         </p>
                     </div>
                 </div>
+                <div className="flex lg:flex-col lg:gap-10 gap-5 items-start">
+                    <div className="lg:h-28 rounded-full lg:w-28 bg-[#FFE7CE] h-14 w-14 flex items-center justify-center">
+                    <Image src={monitor} className="lg:p-10 p-4" alt="sharing" />
+                    </div>
+                    <div className="flex flex-col gap-4 lg:pt-0 pt-3 lg:w-full w-3/4">
+                        <h1 className="font-roboto font-semibold lg:text-4xl text-2xl text-[#353535]">
+                        Virtual and Local Meetups
+                        </h1>
+                        <p className="font-sans lg:text-3xl text-xl text-[#353535CC]">
+                        Network with like-minded individuals.
+                        </p>
+                    </div>
+                </div>
 {/* 
                 <div className="">
                         <Image src={vector} className="" alt="sharing" />
                     </div> */}
 
-                <div className="flex lg:flex-col lg:gap-10 gap-5 items-start">
-                <div className="lg:h-28 rounded-full lg:w-28 bg-[#FFE7CE] h-14 w-14 flex items-center justify-center">
-                        <Image src={monitor} className="lg:p-10 p-4" alt="sharing" />
-                    </div>
-                    <div className="flex flex-col gap-4 lg:pt-0 pt-3">
-                        <h1 className="font-roboto font-semibold lg:text-4xl text-2xl text-[#353535]">
-                            Virtual and Local Meetups
-                        </h1>
-                        <p className="font-sans lg:text-3xl text-xl text-[#353535CC]">
-                            Network with like-minded individuals.
-                        </p>
-                    </div>
-                </div>
 
                 <div className="flex lg:flex-col lg:gap-10 gap-5 items-start">
                 <div className="lg:h-28 rounded-full lg:w-28 bg-[#EBDEBB] h-14 w-14 flex items-center justify-center">
                         <Image src={group} className="lg:p-10 p-4" alt="sharing" />
                     </div>
-                    <div className="flex flex-col gap-4 lg:pt-0 pt-3">
+                    <div className="flex flex-col gap-4 lg:pt-0 pt-3 lg:w-full w-3/4">
                         <h1 className="font-roboto font-semibold lg:text-4xl text-2xl text-[#353535]">
                             Supportive Community
                         </h1>
@@ -70,12 +70,12 @@ export default function FAQ2() {
                         <Image src={job} className="lg:p-10 p-4" alt="sharing" />
                     </div>
                     <div className="lg:hidden block ">
-                    <div className="lg:h-28 flex   rounded-full lg:w-28 bg-[#EBDEBB] h-14 w-14  items-center justify-center">
+                    <div className="lg:h-28 flex   rounded-full lg:w-28 bg-[#D3E6BF] h-14 w-14  items-center justify-center">
                         <Image src={job} className="lg:p-10 p-4" alt="sharing" />
                     </div>
                     </div>
                   
-                    <div className="flex flex-col gap-4 lg:pt-0 pt-3">
+                    <div className="flex flex-col gap-4 lg:pt-0 pt-3 lg:w-full w-3/4">
                         <h1 className="font-roboto lg:block hidden font-semibold lg:text-4xl text-2xl text-[#353535]">
                             Job Portal for Experienced Professionals
                         </h1>
@@ -150,7 +150,7 @@ Job Provided
    <h1 className="text-[#353535]  text-xl font-bold font-roboto">
    Our Milestone
    </h1>
-   <p className="text-[#353535CC] lg:pt-7 pt-3 lg:text-2xl text-base">
+   <p className="text-[#353535CC] lg:pt-7 pt-3 font-mulish lg:text-2xl text-base">
    Lorem incididunt Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. 
    </p>
     </div>

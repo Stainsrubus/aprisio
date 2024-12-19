@@ -47,7 +47,7 @@ export default function Footer() {
                 <h1 className="text-[#043A53] lg:pb-8 pb-4 font-roboto lg:text-3xl text-2xl font-semibold">
                     Navigations
                 </h1>
-                <ul className="flex flex-col gap-4">
+                <ul className="flex flex-col gap-4 font-mulish">
                     <li className="lg:text-2xl text-xl text-[#353535E3]">Home</li>
                     <li className="lg:text-2xl text-xl text-[#353535E3]">About Us</li>
                     <li className="lg:text-2xl text-xl text-[#353535E3]">Community</li>

@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image"
 import video from "../../public/images/video.png"
 export default function About() {
@@ -17,7 +18,7 @@ export default function About() {
 
                 <div className="lg:w-1/2 w-full ">
                     <p className="text-white  lg:text-3xl text-lg  font-sans">
-                        Aprisio is a community for individuals aged 50+ to explore shared interests, foster meaningful connections, and discover job opportunities that value their experience.
+                    Aprisio is a community of, for and by post career individuals whose careers may be behind them but their best days are ahead of them. This community seeks to explore new opportunities to stay productive, foster new, meaningful connections to stay connected, and pursue new interests to retain their zest for life. 
                     </p>
                 </div>
                 </div>

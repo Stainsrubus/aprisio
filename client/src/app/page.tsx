@@ -1,12 +1,12 @@
-import About from "@/components/About";
-import Events from "@/components/Events";
-import FAQ1 from "@/components/FAQ1";
-import FAQ2 from "@/components/FAQ2";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import NavBar from "@/components/NavBar";
-import Testimonial from "@/components/Testimonials";
-import Join from "@/components/Join"
+import About from "../components/About";
+import Events from "../components/Events";
+import FAQ1 from "../components/FAQ1";
+import FAQ2 from "../components/FAQ2";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
+import NavBar from "../components/NavBar";
+import Testimonial from "../components/Testimonials";
+import Join from "../components/Join"
 
 export default function Home() {
   return (

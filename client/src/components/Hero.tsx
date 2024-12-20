@@ -1,3 +1,4 @@
+'use client';
 import { RiArrowRightLine } from "react-icons/ri";
 import hero from "../../public/images/hero.png"
 import heroboy from "../../public/images/hero-boy.png"
@@ -8,13 +9,17 @@ import Image from "next/image";
 
 export default function Hero(){
     return(
-    <section className="relative mt-24 lg:h-[90vh] px-5 lg:px-0 mb-14 lg:mb-0" >
+    <section className="relative lg:mt-36 mt-28 lg:h-[90vh] px-5 lg:px-0 mb-14 lg:mb-0" >
 <div className="flex  flex-col justify-center items-center">
   <div className="flex flex-col justify-center items-center">
-    <h1 className="font-semibold text-[#353535] text-center lg:text-[100px] text-[30px]    font-roboto">Rediscover Connections<br /> and Opportunities</h1>
-    <p className="text-center text-[#353535CC] font-sans lg:text-2xl text-lg pt-10">
-    Join a vibrant community of post carreer like-minded individuals <br /> exploring new interests, meaningful connections, and opportunities.
+    <h1 className="font-semibold text-[#353535] text-center lg:text-[90px] text-[26px] font-roboto">Your Carrer May Be Behind You</h1>
+    <h2 className="font-semibold text-[#353535] text-center lg:text-[70px] text-[26px] mt-5 lg:mt-0 font-roboto">Your Best Days are Ahead of You</h2>
+   <div className="w-full flex justify-center items-center">
+   <p className="text-center lg:w-1/2 w-[95%] text-[#353535CC] leading-loose font-sans lg:text-[24px] text-[18px]  pt-10">
+    Join a vibrant community of active, impactful, & like-minded post  career individuals exploring new opportunities, building new connections, & pursuing new interests.
     </p>
+   </div>
+   
   </div>
   <div className=" pt-16">
     <button className="flex lg:py-6 py-3 lg:text-2xl text-xl lg:px-9 px-5 font-mulish font-bold bg-[#C9A74E] rounded-full justify-center items-center gap-5">

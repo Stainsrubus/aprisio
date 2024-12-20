@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import share from "../../public/images/sharing.png";
 import group from "../../public/images/People.png";
@@ -28,7 +29,7 @@ export default function FAQ2() {
                             Internet-Based Groups
                         </h1>
                         <p className="font-sans lg:text-3xl text-xl text-[#353535CC]">
-                            Connect over topics you love.
+                        Connect with like-minded individuals over topics you love.
                         </p>
                     </div>
                 </div>
@@ -38,10 +39,10 @@ export default function FAQ2() {
                     </div>
                     <div className="flex flex-col gap-4 lg:pt-0 pt-3 lg:w-full w-3/4">
                         <h1 className="font-roboto font-semibold lg:text-4xl text-2xl text-[#353535]">
-                        Virtual and Local Meetups
+                        Virtual and Local Interest-Based Meetups
                         </h1>
                         <p className="font-sans lg:text-3xl text-xl text-[#353535CC]">
-                        Network with like-minded individuals.
+                        Network virtually and in-person with like-minded individuals who share your passion.
                         </p>
                     </div>
                 </div>
@@ -57,10 +58,10 @@ export default function FAQ2() {
                     </div>
                     <div className="flex flex-col gap-4 lg:pt-0 pt-3 lg:w-full w-3/4">
                         <h1 className="font-roboto font-semibold lg:text-4xl text-2xl text-[#353535]">
-                            Supportive Community
+                        Supportive Community
                         </h1>
                         <p className="font-sans lg:text-3xl text-xl text-[#353535CC]">
-                            Join a safe and friendly space to grow.
+                        Join a safe and friendly space to grow.
                         </p>
                     </div>
                 </div>
@@ -77,13 +78,13 @@ export default function FAQ2() {
                   
                     <div className="flex flex-col gap-4 lg:pt-0 pt-3 lg:w-full w-3/4">
                         <h1 className="font-roboto lg:block hidden font-semibold lg:text-4xl text-2xl text-[#353535]">
-                            Job Portal for Experienced Professionals
+                        Opportunities for Experienced Professionals
                         </h1>
                         <h1 className="font-roboto lg:hidden block font-semibold lg:text-4xl text-2xl text-[#353535]">
-                            Job Portal for <br /> Experienced  Professionals
+                        Opportunities for <br /> Experienced  Professionals
                         </h1>
                         <p className="font-sans lg:text-3xl text-xl text-[#353535CC]">
-                            Discover projects or jobs that value your expertise.
+                        Discover projects & assignments and jobs that value your expertise and optimize for your maturity and experience.
                         </p>
                     </div>
                 </div>

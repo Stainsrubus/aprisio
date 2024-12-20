@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { Menu, X } from 'lucide-react'
+import Link from 'next/link'
 
 export default function NavBar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
@@ -17,7 +18,7 @@ export default function NavBar() {
     const element = document.getElementById(id);
     if (element) {
       const navbarHeight = document.querySelector('nav')?.offsetHeight || 0;
-      const offset = window.innerHeight * 0.01 + navbarHeight; // 10% of viewport height + navbar height
+      const offset = window.innerHeight * 0.1 + navbarHeight; // 10% of viewport height + navbar height
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - offset;
 
@@ -52,9 +53,12 @@ export default function NavBar() {
     <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${bgColor}`}>
       <div className={`flex justify-between items-center ${padding} px-4 md:px-10 lg:justify-evenly`}>
         {/* logo */}
+        <Link href={"/"}>
         <div>
-          <a href="#home"  className="font-sans text-[#043A53] font-bold text-2xl" onClick={(e) => handleNavClick(e, 'home')}>Aprisio</a>
+          <h1 className="font-sans text-[#043A53] font-bold text-2xl">Aprisio</h1>
         </div>
+        </Link>
+     
 
         {/* Nav Links - Hidden on small screens */}
         <div className="hidden lg:block">

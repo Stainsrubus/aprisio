@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import yoga from "../../public/images/yoga.png";
 import arrow2 from "../../public/images/arrow-2.png";
@@ -20,15 +20,6 @@ export default function Events() {
     { title: "Yoga6", src: yoga, date: "26 Jan 2024" },
     { title: "Yoga7", src: yoga, date: "27 Jan 2024" },
   ];
-
-  // Swiper reference to start at the second slide
-  const swiperRef = useRef(null);
-
-//   useEffect(() => {
-//     if (swiperRef.current) {
-//       swiperRef.current.slideToLoop(1, 0); // Go to the second slide (index 1) in loop mode
-//     }
-//   }, []);
 
   return (
     <section className="bg-white ">
@@ -51,7 +42,6 @@ export default function Events() {
       {/* Swiper Carousel Section */}
       <div className="px-14 lg:py-20  lg:block hidden">
         <Swiper
-          ref={swiperRef}
           modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
            spaceBetween={50}
           slidesPerView={3}

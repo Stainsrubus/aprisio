@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image"
 import step1 from "../../public/images/1.png"
 import step2 from "../../public/images/2.png"
@@ -16,18 +17,18 @@ export default function FAQ1(){
       </p>
     </div>
 
-    <div className="lg:pt-16 pt-10 flex lg:flex-row flex-col">
+    <div className="lg:pt-16 pt-10 flex lg:flex-row flex-col ">
 
-<div className="flex lg:flex-col items-start gap-5">
+<div className="flex lg:flex-col items-start gap-5 lg:w-1/3 w-full ">
 <div className="">
 <Image className="lg:w-24 lg:h-24 w-14 h-14"  src={step1} alt="step1"/>
 </div>
-<div className="-mt-6 lg:mt-0">
+<div className="-mt-6 lg:mt-0 ">
     <h1 className="text-[#353535] pt-10 lg:text-4xl text-xl font-bold font-mulish">
     Create Your Profile
     </h1>
     <p className="font-mulish lg:text-3xl text-xl text-[#353535CC] lg:pt-10 pt-2"> 
-    Share your interests and skills.
+    Share your interests, Passion & skills.
     </p>
 </div>
 </div>
@@ -38,7 +39,7 @@ export default function FAQ1(){
     <Image className="h-6 w-6"  src={arrowDown} alt=""/>
 </div>
 
-<div className="flex lg:flex-col items-start gap-5">
+<div className="flex lg:flex-col items-start gap-5 lg:w-1/3 w-full ">
 <div className="">
 <Image className="lg:max-w-24 lg:max-h-24 max-w-14 max-h-14"  src={step2} alt="step1"/>
 </div>
@@ -47,7 +48,7 @@ export default function FAQ1(){
     Join Groups
     </h1>
     <p className="font-mulish lg:text-3xl text-xl text-[#353535CC] lg:pt-10 pt-2"> 
-    Find your niche or share opportunities.
+    Join like minded people who share your interests & Passion.
     </p>
 </div>
 <div>
@@ -61,7 +62,7 @@ export default function FAQ1(){
 <div className="pl-4 pb-4 lg:hidden block">
     <Image className="h-6 w-6"  src={arrowDown} alt=""/>
 </div>
-<div className="flex lg:flex-col items-start gap-5">
+<div className="flex lg:flex-col items-start gap-5 lg:w-1/3 w-full">
 <div className="">
 <Image className="lg:max-w-24 lg:max-h-24 max-w-14 max-h-14"  src={step3} alt="step3"/>
 </div>
@@ -70,7 +71,7 @@ export default function FAQ1(){
     Connect and Collaborate
     </h1>
     <p className="font-mulish lg:text-3xl text-xl text-[#353535CC] lg:pt-10 pt-2"> 
-    Arrange meetups and build relationships.
+    Arrange virtual & in person meetups & build lasting connections.
     </p>
 </div>
 <div>

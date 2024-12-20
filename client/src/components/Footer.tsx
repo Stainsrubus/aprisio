@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image"
 import mail from "../../public/images/mail.png"
 import location from "../../public/images/location.png"
@@ -60,7 +61,7 @@ export default function Footer() {
             </div>
          
 
-            <div className=" font-mulish text-xl text-[#043A53] lg:px-24 lg:py-7 py-3 px-3 flex md:justify-between justify-center  items-center">
+            <div className=" font-mulish text-xl bg-[#F2F5F6] text-[#043A53] lg:px-24 lg:py-7 py-3 px-3 flex md:justify-between justify-center  items-center">
                 <p className="md:block hidden">Aprisio</p>
                 <p className="md:text-xl text-base ">Privacy Policy , Terms & Conditions</p>
                 <p className="md:block hidden">

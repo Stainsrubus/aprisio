@@ -24,7 +24,7 @@ export default function JoinCommunity(){
       </div>
       <div>
         <p className="text-[#043A53] opacity-70 lg:text-left text-center  font-roboto font-medium text-xl">
-          Let's join yourself to the community
+          Lets join yourself to the community
         </p>
       </div>
     </div>

@@ -12,13 +12,24 @@ import Script from 'next/script';
 import { RiArrowRightLine } from 'react-icons/ri';
 import { GiCheckMark } from 'react-icons/gi';
 
+interface OTPlessResponse {
+    success: boolean;
+    message?: string;
+    data?: {
+        phone?: string; // Adjust based on actual expected data structure
+    };
+}
+
+// Update the global interface to use the new types
 declare global {
     interface Window {
-      OTPlessSignin: any;
-      OTPless:any;
-      handleOTPlessSuccess:any;
+        OTPlessSignin: {
+            initiate: (params: { channel: string; email: string }) => Promise<OTPlessResponse>;
+            authenticate: (params: { phoneCallback: (response: OTPlessResponse) => void; phone: string }) => void;
+        };
+        handleOTPlessSuccess?: () => void;
     }
-  }
+}
 
 // Form validation schema
 const formSchema = z.object({
@@ -33,11 +44,10 @@ const formSchema = z.object({
 
 const JoinCommunityForm = () => {
   const [isEmailValid, setIsEmailValid] = useState(false);
-  const [isPhoneValid, setIsPhoneValid] = useState(false);
+//   const [isPhoneValid, setIsPhoneValid] = useState(false);
   const [emailVerified, setEmailVerified] = useState(false);
   const [phoneVerified, setPhoneVerified] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-const [isEmailChecked,setIsEmailChecked]=useState(false);
+//   const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -51,26 +61,26 @@ const [isEmailChecked,setIsEmailChecked]=useState(false);
   const phoneValue = watch("phone");
   
   // Phone verification
-  const handlePhoneVerifyClick = async () => {
-    setIsLoading(true);
-    try {
-      window.OTPless.authenticate({
-        phoneCallback: (response: any) => {
-          if (response.data && response.data.phone === phoneValue) {
-            setPhoneVerified(true);
-          } else {
-            alert("Phone verification failed. Please try again.");
-          }
-          setIsLoading(false);
-        },
-        phone: phoneValue,
-      });
-    } catch (error) {
-      console.error("Error in phone verification:", error);
-      alert("Failed to initiate phone verification.");
-      setIsLoading(false);
-    }
-  };
+//   const handlePhoneVerifyClick = async () => {
+//     setIsLoading(true);
+//     try {
+//       window.OTPless.authenticate({
+//         phoneCallback: (response: any) => {
+//           if (response.data && response.data.phone === phoneValue) {
+//             setPhoneVerified(true);
+//           } else {
+//             alert("Phone verification failed. Please try again.");
+//           }
+//           setIsLoading(false);
+//         },
+//         phone: phoneValue,
+//       });
+//     } catch (error) {
+//       console.error("Error in phone verification:", error);
+//       alert("Failed to initiate phone verification.");
+//       setIsLoading(false);
+//     }
+//   };
 
 const handleSendOtp = async (email: string) => {
 window?.OTPlessSignin?.initiate({ channel: "EMAIL", email: email })
@@ -90,28 +100,27 @@ window?.OTPlessSignin?.initiate({ channel: "EMAIL", email: email })
 
   useEffect(() => {
     window.handleOTPlessSuccess = () => {
-      setIsEmailChecked(true);
-      setEmailVerified(true);
+        setEmailVerified(true);
     };
     return () => {
-      delete window.handleOTPlessSuccess;
+        window.handleOTPlessSuccess = undefined; 
     };
-  }, []);
+}, []);
 
 
   // Real-time phone validation
   useEffect(() => {
     if (phoneValue) {
       const isValid = phoneValue.length === 10 && /^\d+$/.test(phoneValue);
-      setIsPhoneValid(isValid);
+    //   setIsPhoneValid(isValid);
       if (!isValid) setPhoneVerified(false);
     } else {
-      setIsPhoneValid(false);
+    //   setIsPhoneValid(false);
       setPhoneVerified(false);
     }
   }, [phoneValue]);
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: object) => {
     if (!emailVerified || !phoneVerified) {
       alert("Please verify both email and phone number before submitting.");
       return;
@@ -125,7 +134,7 @@ window?.OTPlessSignin?.initiate({ channel: "EMAIL", email: email })
         id="otpless-sdk"
         src="https://otpless.com/v4/headless.js"
         data-appid="HYRAB3PGUFKD9MFNZN2N"
-        strategy="beforeInteractive"
+        strategy="lazyOnload"
         onError={(e: Error) => {
             console.error('OTPLess Script failed to load', e)
           }}
@@ -206,7 +215,7 @@ window?.OTPlessSignin?.initiate({ channel: "EMAIL", email: email })
          <button
          type="button"
          onClick={() => handleSendOtp(emailValue)}
-         disabled={isLoading}
+        //  disabled={isLoading}
          className={`absolute right-3 font-semibold ${
            emailVerified ? "bg-[#0F8040] text-white text-xl py-3 pl-4 pr-5" : "bg-[#F0B73F] py-3 px-6 text-2xl text-[#353535]"
          } py-3 px-6 top-3 rounded-2xl font-mulish `}
@@ -238,9 +247,9 @@ window?.OTPlessSignin?.initiate({ channel: "EMAIL", email: email })
           type="text"
           placeholder="Phone"
           inputMode="numeric"
-          onInput={(e:any) => {
+          onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
             e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10); 
-          }}
+        }}
           className={`w-full text-xl pl-20 py-2  pr-3 h-20 border ${
             phoneVerified ? "border-green-500" : errors.phone ? "border-red-500" : "border-gray-300"
           } rounded-2xl focus:ring-2 focus:outline-none focus:ring-blue-500`}
